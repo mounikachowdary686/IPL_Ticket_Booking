@@ -1,17 +1,16 @@
-import {BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-
 import Home from "./pages/Home";
 import Matches from "./pages/Matches";
 import Booking from "./pages/Booking";
 import BookingHistory from "./pages/BookingHistory";
+
 import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-
+    <HashRouter>
       <Navbar />
 
       <Routes>
@@ -21,7 +20,8 @@ function App() {
         <Route path="/history" element={<BookingHistory />} />
       </Routes>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
+
 export default App;
